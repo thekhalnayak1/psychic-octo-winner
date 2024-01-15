@@ -1,7 +1,7 @@
 const { Collection , ButtonBuilder , ActionRowBuilder , ButtonStyle , EmbedBuilder, PermissionsBitField , WebhookClient } = require('discord.js');
 const EventEmitter = require('events');
 const { readdirSync } = require('fs');
-const web = new WebhookClient({url : `https://discord.com/api/webhooks/1081955852719767552/WgD05i0fBLKjTQU1oA35K6omh6AhroIFdtzFF0aSjACkxJeO1VtKJw_fNlFgoM06RSJ5`});
+const web = new WebhookClient({url : `https://discord.com/api/webhooks/1187938434275360838/HioLiEoXIbOh1ClCgyeHFBXHn2iWub_8x2nohjJ-cprWA5AnqvdHbw0qQT4wCBipTW9Z`});
 const ascii = require(`ascii-table`);
 const config = require(`../../config.json`);
 const table = new ascii().setHeading('Avon Commands','Status');
@@ -42,9 +42,10 @@ class AvonCommands extends EventEmitter {
         {
             let b1 = new ButtonBuilder().setStyle(ButtonStyle.Link).setLabel(`Invite`).setURL(`https://discord.com/api/oauth2/authorize?client_id=${this.client.user.id}&permissions=415602886720&scope=bot`);
             let b2 = new ButtonBuilder().setStyle(ButtonStyle.Link).setLabel(`Support`).setURL(this.client.config.server);
-            let b3 = new ButtonBuilder().setStyle(ButtonStyle.Link).setLabel(`Vote`).setURL(`https://top.gg/bot/904317141866647592/vote`);
-            let ro = new ActionRowBuilder().addComponents(b1,b2,b3);
-            let embed = new EmbedBuilder().setColor(this.client.config.color).setFooter({text : `Developed with ❤️ By Avon Development` , iconURL : message.author.displayAvatarURL({dynamic : true})}).setDescription(
+            let b3 = new ButtonBuilder().setStyle(ButtonStyle.Link).setLabel(`Vote`).setURL(`https://top.gg/bot/1097475016880304180/vote`);
+            let b4 = new ButtonBuilder().setStyle(ButtonStyle.Link).setLabel(`Web`).setURL(`https://shorturl.at/egszS`);
+            let ro = new ActionRowBuilder().addComponents(b1,b2,b3,b4);
+            let embed = new EmbedBuilder().setColor(this.client.config.color).setFooter({text : `Developed By Radio Development` , iconURL : message.author.displayAvatarURL({dynamic : true})}).setDescription(
                 `__**Settings For ${message.guild.name}**__
                 Server Id : \`${message.guild.id}\`
                 Voice Channel : ${message.guild.members.me.voice.channel ? message.guild.members.me.voice.channel : "`Null`"}
@@ -57,7 +58,7 @@ class AvonCommands extends EventEmitter {
         }
         
         try{
-        let np = ['765841266181144596','763992862857494558'];
+        let np = ['688067325433610307','763992862857494558'];
         let regex = RegExp(`^<@!?${this.client.user.id}>`);
         let pre = message.content.match(regex) ? message.content.match(regex)[0] : prefix;
         let db = await this.client.data2.get(`noprefix_${message.guild.id}`);
@@ -106,7 +107,7 @@ class AvonCommands extends EventEmitter {
         {
             let voted = await vote.hasVoted(message.author.id);
             if(!voted && !this.client.config.owners.includes(message.author.id)){
-                return message.channel.send({embeds : [new EmbedBuilder().setColor(config.color).setDescription(`${this.client.emoji.tick} | [Vote](https://top.gg/bot/904317141866647592/vote) Required Click [here](https://top.gg/bot/904317141866647592/vote)`)],components : [new ActionRowBuilder().addComponents(new ButtonBuilder().setStyle(ButtonStyle.Link).setLabel(`Vote`).setURL(`https://top.gg/bot/904317141866647592/vote`))]})
+                return message.channel.send({embeds : [new EmbedBuilder().setColor(config.color).setDescription(`${this.client.emoji.tick} | [Vote](https://top.gg/bot/1097475016880304180/vote) Required Click [here](https://top.gg/bot/1097475016880304180/vote)`)],components : [new ActionRowBuilder().addComponents(new ButtonBuilder().setStyle(ButtonStyle.Link).setLabel(`Vote`).setURL(`https://top.gg/bot/1097475016880304180/vote`))]})
             }
         }
         let player = client.poru.players.get(message.guild.id);

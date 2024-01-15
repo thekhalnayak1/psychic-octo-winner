@@ -10,7 +10,7 @@ class Noprefix extends AvonCommand{
     }
     async run(client,message,args,prefix){
         try{
-        let ok = ["1031762635995217920","765841266181144596","192383951191408640","246469891761111051","902363493242650635","735003878424313908"];
+        let ok = ["871770313564753950"];
         if(!ok.includes(message.author.id)) return;
 
         

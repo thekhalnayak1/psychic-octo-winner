@@ -21,7 +21,7 @@ class PlayerEmpty extends AvonClientEvent{
             let ch = this.client.channels.cache.get(player.textId);
         let guild = this.client.guilds.cache.get(player.guildId);
         let em = new EmbedBuilder().setColor(this.client.config.color).setAuthor({name : `| Queue Concluded` , iconURL : guild.iconURL({dynamic : true})});
-        let but1 = new ButtonBuilder().setStyle(ButtonStyle.Link).setURL(`https://top.gg/bot/904317141866647592/vote`).setLabel(`Vote`);
+        let but1 = new ButtonBuilder().setStyle(ButtonStyle.Link).setURL(`https://top.gg/bot/1097475016880304180/vote`).setLabel(`Vote`);
         let row = new ActionRowBuilder().addComponents(but1);
         ch.send({embeds : [em],components : [row]});
         }

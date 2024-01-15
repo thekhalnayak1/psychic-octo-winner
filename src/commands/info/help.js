@@ -18,11 +18,11 @@ class Help extends AvonCommand{
              ${client.emoji.arrow} A complete Music Bot for your server
              ${client.emoji.arrow} Providing you the best quality music
              
-             ${client.emoji.arrow} [Invite](https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot%20applications.commands) | [Support](${client.config.server}) | [Vote](https://top.gg/bot/904317141866647592/vote)`
+             ${client.emoji.arrow} [Invite](https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot%20applications.commands) | [Support](${client.config.server}) | [Vote](https://top.gg/bot/1097475016880304180/vote)`
         ).addFields({
             name : `Command Categories`,
             value : `${client.emoji.music} \`:\` Music \n ${client.emoji.filters} \`:\` Filters \n ${client.emoji.settings} \`:\` Settings \n ${client.emoji.info} \`:\` Information \n ${client.emoji.allCommands} \`:\` All Commands`
-        }).setFooter({text : `Developed with ❤️ By Avon Development` , iconURL : message.guild.iconURL({dynamic : true})}).setThumbnail(message.author.displayAvatarURL({dynamic : true}))
+        }).setFooter({text : `Developed By Radio Development` , iconURL : message.guild.iconURL({dynamic : true})}).setThumbnail(message.author.displayAvatarURL({dynamic : true}))
 
         let b1 = new ButtonBuilder().setStyle(ButtonStyle.Secondary).setCustomId(`m1`).setEmoji(client.emoji.music);
         let b2 = new ButtonBuilder().setStyle(ButtonStyle.Secondary).setCustomId(`m2`).setEmoji(client.emoji.filters);
@@ -82,7 +82,7 @@ class Help extends AvonCommand{
             {
                 name : `__Information Commands__ [${client.AvonCommands.commands.filter(x => x.cat && x.cat === `info`).size}]`,value : `${client.AvonCommands.commands.filter(x => x.cat && x.cat === `info`).map(r => `\`${r.name}\``).sort().join(`, `)}`
             }
-        ]).setThumbnail(message.author.displayAvatarURL({dynamic : true})).setFooter({text : `Developed with ❤️ By Avon Development` , iconURL : message.guild.iconURL({dynamic : true})})
+        ]).setThumbnail(message.author.displayAvatarURL({dynamic : true})).setFooter({text : `Developed By Radio Development` , iconURL : message.guild.iconURL({dynamic : true})})
 
 
         let msg = await message.channel.send({embeds : [em],components : [ro,ro2]});

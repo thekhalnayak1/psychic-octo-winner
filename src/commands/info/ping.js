@@ -9,7 +9,7 @@ class ping extends AvonCommand {
     }
     async run(client,message,args,prefix){
         return message.channel.send({embeds : [new EmbedBuilder().setColor(client.config.color).setAuthor({name : `${client.user.username} Ping
-       `}).addFields({name : `<a:ping_op:1079400309970964490> **Pong** <a:ping_op:1079400309970964490>`,value : `${client.ws.ping} ms`}).setFooter({text : `Requested By : ${message.author.tag}`}).setThumbnail(message.author.displayAvatarURL({dynamic : true}))]});
+       `}).addFields({name : `<:ping:1124781159042273352> **Pong** <:ping:1124781159042273352>`,value : `${client.ws.ping} ms`}).setFooter({text : `Requested By : ${message.author.tag}`}).setThumbnail(message.author.displayAvatarURL({dynamic : true}))]});
     }
 }
 module.exports = ping;

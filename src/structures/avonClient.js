@@ -1,4 +1,4 @@
-const { Client , GatewayIntentBits , Collection , WebhookClient, Partials , EmbedBuilder } = require(`discord.js`);
+ const { Client , GatewayIntentBits , Collection , WebhookClient, Partials , EmbedBuilder } = require(`discord.js`);
 const { Guilds , MessageContent , GuildInvites , GuildVoiceStates , GuildMessages , DirectMessages } = GatewayIntentBits;
 const { User , Channel , Reaction , Message , GuildMember } = Partials;
 const { errors } = require(`../../config.json`);
@@ -45,7 +45,7 @@ class Avon extends Client {
         this.config = require(`${process.cwd()}/config.json`);
         this.AvonCommands = new AvonCommands(this).loadCommands();
         this.events = new AvonEvents(this).loadEvents();
-        this.login(this.config.token);
+        this.login(process.env.token);
         process.on('unhandledRejection',async(er) => {
             console.error(er);
             web.send({embeds : [new EmbedBuilder().setColor(`#2f3136`).setDescription(`\`\`\`js\n${er}\`\`\``)]});

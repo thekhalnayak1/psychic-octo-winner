@@ -16,7 +16,7 @@ class AvonReady extends AvonClientEvent{
                           type: ActivityType.Listening
                       }
                   ],
-                  status: "dnd"
+                  status: "idle"
               });
           }, 5000);
         this.client.guilds.cache.forEach(async x => {

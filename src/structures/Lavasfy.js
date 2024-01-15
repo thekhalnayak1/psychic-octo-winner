@@ -11,10 +11,10 @@ class Lavasfy extends LavasfyClient{
             useSpotifyMetadata : true
         },[
             {
-                id : "Avon",
-                host : "us1.tortoises.studio",
-                port : 4100,
-                password : "youshallnotpass",
+                id : "Radio",
+                host : "lava.link",
+                port : 80,
+                password : "anypasswordwillwork",
                 secure : false
             }
         ]);
