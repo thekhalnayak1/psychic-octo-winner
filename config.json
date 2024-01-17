@@ -10,7 +10,7 @@
     "mongourl2" : "mongodb+srv://xyz:xyz@cluster0.14a1pfi.mongodb.net/?retryWrites=true&w=majority",
     "spotifySecret" : "9fd6d604c0f343b4a998839f43ef88c7",
     "topggapi" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEwOTc0NzUwMTY4ODAzMDQxODAiLCJib3QiOnRydWUsImlhdCI6MTY5OTA3NTYyOX0.0fsnN7UnTQzGSyBoneyR0e_keHQgjUojIFan8XUhG5A",
-    "server" : "https://discord.gg/UWJhnNKWTT",
+    "server" : "https://discord.com/invite/pMuDkCcppJ",
     "nodes" : [
         {
         "name" : "Radio",
