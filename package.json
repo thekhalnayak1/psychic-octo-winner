@@ -27,7 +27,6 @@
   "description": "best music bot discord",
   "main": "src/sharding.js",
   "scripts": {
-    "start": "node src/index.js",
     "test": "src/index.js"
   },
   "repository": {
